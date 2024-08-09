@@ -148,7 +148,7 @@ img {
 }
 
 .btn-social::after {
-    background: url('../images/icons/social.svg') 50% / 31.31px 31.31px no-repeat;
+    background: url('../images/icons/social.png') 50% / 31.31px 31.31px no-repeat;
 }
 
 .block-agreement {
