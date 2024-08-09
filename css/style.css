@@ -526,6 +526,7 @@ img {
 .screen-desc {
     font-weight: 300;
     font-size: 14px;
+    max-width: 294px;
 }
 
 .tasks-item {
