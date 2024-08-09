@@ -10,80 +10,79 @@
 </head>
 
 <body>
-<div class="screen screen-home screen-lines-bg">
-    <div class="img-user-container">
-        <img id="img-user" src="./images/user.jfif" alt="" class="img-user">
-    </div>
-    <div class="nick-name-user">
-        <span>НИк: <span id="user-name">defc4nka</span></span>
-    </div>
-    <div class="energy-container">
-        <div class="energy-container-title">
-            Бар энергии
+    <div class="screen screen-home screen-lines-bg">
+        <div class="img-user-container">
+            <img id="img-user" src="./images/user.jfif" alt="" class="img-user">
         </div>
-        <div class="energy-bar">
-            
-            <div class="energy-bar-block first-block">
-                <div class="count-energy">100</div>
+        <div class="nick-name-user">
+            <span>НИк: <span id="user-name">defc4nka</span></span>
+        </div>
+        <div class="energy-container">
+            <div class="energy-container-title">
+                Бар энергии
             </div>
-            <div class="energy-bar-block"></div>
-            <div class="energy-bar-block"></div>
-            <div class="energy-bar-block"></div>
-            <div class="energy-bar-block"></div>
-            <div class="energy-bar-block last-block"></div>
+            <div class="energy-bar">
+
+                <div class="energy-bar-block first-block">
+                    <div class="count-energy">100</div>
+                </div>
+                <div class="energy-bar-block"></div>
+                <div class="energy-bar-block"></div>
+                <div class="energy-bar-block"></div>
+                <div class="energy-bar-block"></div>
+                <div class="energy-bar-block last-block"></div>
+            </div>
+        </div>
+
+        <div class="user-info-items">
+            <div class="user-info-item">
+                <div class="user-info-item-title">Кол-во протонов</div>
+                <div class="user-info-item-count">5</div>
+            </div>
+            <div class="user-info-item">
+                <div class="user-info-item-title">Уровень атома</div>
+                <div class="user-info-item-count">3</div>
+            </div>
+            <div class="user-info-item">
+                <div class="user-info-item-title">Количество колец</div>
+                <div class="user-info-item-count">2</div>
+            </div>
+        </div>
+
+        <div class="claim-container">
+            <div class="claim-line">
+
+            </div>
+            <div class="btn-claim-background">
+                <div class="btn-claim">Claim</div>
+            </div>
+
+        </div>
+
+
+        <div class="screen-footer">
+            <div class="footer-btn btn-home">
+            </div>
+            <div class="footer-btn btn-play">
+            </div>
+            <div class="footer-btn btn-evol">
+            </div>
+            <div class="footer-btn btn-social">
+            </div>
         </div>
     </div>
 
-    <div class="user-info-items">
-        <div class="user-info-item">
-            <div class="user-info-item-title">Кол-во протонов</div>
-            <div class="user-info-item-count">5</div>
-        </div>
-        <div class="user-info-item">
-            <div class="user-info-item-title">Уровень атома</div>
-            <div class="user-info-item-count">3</div>
-        </div>
-        <div class="user-info-item">
-            <div class="user-info-item-title">Количество колец</div>
-            <div class="user-info-item-count">2</div>
-        </div>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-    <div class="claim-container">
-        <div class="claim-line">
+    <script>
+        var srcAvatar = 'https://www.gravatar.com/avatar/' + hash + '?d=robohash&s=200'
+        document.getElementById('img-user').src = srcAvatar
 
-        </div>
-        <div class="btn-claim-background">
-            <div class="btn-claim">Claim</div>
-        </div>
-        
-    </div>
-
-
-    <div class="screen-footer">
-        <div class="footer-btn btn-home">
-        </div>
-        <div class="footer-btn btn-play"> 
-        </div>
-        <div class="footer-btn btn-evol"> 
-        </div>
-        <div class="footer-btn btn-social">
-        </div>
-    </div>
-</div>
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-<script>
-    document.getElementById("user-name").innerHTML = window.Telegram.WebApp.initDataUnsafe.user.first_name;
-   var hash = CryptoJS.MD5("Message");
-   
-   var srcAvatar = 'https://www.gravatar.com/avatar/' + hash + '?d=robohash&s=200'
-   document.getElementById('img-user').src = srcAvatar
-  
-</script>
+        document.getElementById("user-name").innerHTML = window.Telegram.WebApp.initDataUnsafe.user.first_name;
+        var hash = CryptoJS.MD5("Message");
+    </script>
 </body>
 
 </html>
