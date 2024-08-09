@@ -6,13 +6,13 @@
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0">
     <title>Proton</title>
-    <link href="./css/style.css?v=348123455" type="text/css" rel="stylesheet">
+    <link href="./css/style.css?v=31231223455" type="text/css" rel="stylesheet">
 </head>
 
 <body>
 <div class="screen screen-home screen-lines-bg">
     <div class="img-user-container">
-        <img src="./images/user.jfif" alt="" class="img-user">
+        <img id="img-user" src="./images/user.jfif" alt="" class="img-user">
     </div>
     <div class="nick-name-user">
         <span>НИк: <span id="user-name">defc4nka</span></span>
@@ -49,6 +49,16 @@
         </div>
     </div>
 
+    <div class="claim-container">
+        <div class="claim-line">
+
+        </div>
+        <div class="btn-claim-background">
+            <div class="btn-claim">Claim</div>
+        </div>
+        
+    </div>
+
 
     <div class="screen-footer">
         <div class="footer-btn btn-home">
@@ -62,6 +72,20 @@
     </div>
 </div>
     
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+    document.getElementById("user-name").innerHTML = window.Telegram.WebApp.initDataUnsafe.user.first_name;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+<script>
+   var hash = CryptoJS.MD5("Message");
+   
+   var srcAvatar = 'https://www.gravatar.com/avatar/' + hash + '?d=robohash'
+   document.getElementById('img-user').src = srcAvatar
+  
+</script>
 </body>
 
 </html>
