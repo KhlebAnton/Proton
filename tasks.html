@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0">
+    <title>Proton</title>
+    <link href="./css/style.css?v=37894634896455" type="text/css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+    <div class="screen screen-tasks">
+        <div class="logo-gradinent">
+            <div class="logo-proton"></div>
+        </div>
+        <div class="screen-title">
+            4 task availble
+        </div>
+        <div class="screen-desc">
+            We’ll reward you immediately with points after each task comipletion
+        </div>
+
+        <div class="tasks-items">
+            <div class="tasks-item-wrapper">
+                <div class="tasks-item">
+                    <div class="tasks-item-icon icon-youtube">
+                        
+                    </div>
+                    <div class="tasks-item-desc">
+                        <div class="tasks-item-desc-title">
+                            Эксклюзивная информация о листинге 
+                        </div>
+                        <div class="tasks-item-desc-coin">
+                            + 6 65843 00
+                        </div>
+                    </div>
+                    <div class="tasks-item-btn-wrapper">
+                        <div class="tasks-item-btn task-active">Start</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks-item-wrapper">
+                <div class="tasks-item">
+                    <div class="tasks-item-icon icon-tg">
+                        
+                    </div>
+                    <div class="tasks-item-desc">
+                        <div class="tasks-item-desc-title">
+                            Присоеденяйся к нашему телеграм чату
+                        </div>
+                        <div class="tasks-item-desc-coin">
+                            + 6 65843 00
+                        </div>
+                    </div>
+                    <div class="tasks-item-btn-wrapper">
+                        <div class="tasks-item-btn">Claim</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks-item-wrapper">
+                <div class="tasks-item">
+                    <div class="tasks-item-icon icon-disc">
+                        
+                    </div>
+                    <div class="tasks-item-desc">
+                        <div class="tasks-item-desc-title">
+                            Эксклюзивная информация о листинге 
+                        </div>
+                        <div class="tasks-item-desc-coin">
+                            + 6 65843 00
+                        </div>
+                    </div>
+                    <div class="tasks-item-btn-wrapper">
+                        <div class="tasks-item-btn">Start</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks-item-wrapper">
+                <div class="tasks-item onplay">
+                    <div class="tasks-item-icon icon-x">
+                        
+                    </div>
+                    <div class="tasks-item-desc">
+                        <div class="tasks-item-desc-title">
+                            Следи за нашим аккаунтов в X 
+                        </div>
+                        <div class="tasks-item-desc-coin">
+                            + 6 65843 00
+                        </div>
+                    </div>
+                    <div class="tasks-item-btn-wrapper">
+                        <div class="tasks-item-btn">Start</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tasks-item-wrapper">
+                <div class="tasks-item checked">
+                    <div class="tasks-item-icon icon-tg icon-new-mes">
+                        
+                    </div>
+                    <div class="tasks-item-desc">
+                        <div class="tasks-item-desc-title">
+                            Присоеденяйся к нашему телеграм каналу  
+                        </div>
+                        <div class="tasks-item-desc-coin">
+                            + 6 65843 00
+                        </div>
+                    </div>
+                    <div class="tasks-item-btn-wrapper">
+                        <div class="tasks-item-btn">Start</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="screen-footer">
+            <div class="footer-btn btn-home">
+            </div>
+            <div class="footer-btn btn-play" onclick="window.location.href = './game.html'">
+            </div>
+            <div class="footer-btn btn-evol btn-active">
+            </div>
+            <div class="footer-btn btn-social">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var srcAvatar = 'https://www.gravatar.com/avatar/' + hash + '?d=robohash&s=200'
+        document.getElementById('img-user').src = srcAvatar
+
+        document.getElementById("user-name").innerHTML = window.Telegram.WebApp.initDataUnsafe.user.first_name;
+        var hash = CryptoJS.MD5("Message");
+    </script>
+</body>
+
+</html>
