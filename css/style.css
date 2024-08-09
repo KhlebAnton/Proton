@@ -86,6 +86,7 @@ img {
 
 .screen-lines-bg {
     background: url('../images/bg/lines-bg.svg') 50% / cover, url('../images/bg/gradient-bg.png') 50% / cover;
+    background-attachment:fixed;
 }
 
 .screen-stars-bg>.energy-container {
