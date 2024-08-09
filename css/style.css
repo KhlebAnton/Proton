@@ -26,6 +26,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 
 html,
@@ -63,9 +70,29 @@ img {
     align-items: center;
     justify-content: center;
 }
+.screen-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .screen-lines-bg {
     background: url('../images/bg/lines-bg.svg') 50% / cover, url('../images/bg/gradient-bg.png') 50% / cover;
+}
+.screen-stars-bg > .energy-container {
+ position: relative;
+}
+.screen-stars-bg::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+    opacity: .4;
+    background: url('../images/bg/stars.jfif') 50% / cover ;
+    
 }
 
 .screen-header {
@@ -81,6 +108,7 @@ img {
     height: 57px;
     border-radius: 50px;
     position: relative;
+    cursor: pointer;
 }
 
 .btn-back::after {
@@ -118,7 +146,9 @@ img {
     border-radius: 50px;
 
     position: relative;
+    cursor: pointer;
 }
+
 .footer-btn.btn-play {
     background: none;
 }
@@ -127,6 +157,7 @@ img {
     -webkit-box-shadow: 0px 0px 13px 8px rgba(107, 21, 112, 1);
     -moz-box-shadow: 0px 0px 13px 8px rgba(107, 21, 112, 1);
     box-shadow: 0px 0px 13px 8px rgba(107, 21, 112, 1);
+    pointer-events: none;
 }
 
 .footer-btn::after {
@@ -231,6 +262,7 @@ img {
     border-radius: 30px;
     transition: opacity .3s;
     opacity: 1;
+    cursor: pointer;
 }
 
 .btn-action.disabled {
@@ -263,11 +295,13 @@ img {
     font-size: 32px;
     text-align: center;
 }
+
 .energy-container-title {
     text-align: center;
     font-weight: 700;
     font-size: 12px;
 }
+
 .energy-bar {
     position: relative;
     height: 22px;
@@ -276,7 +310,10 @@ img {
     gap: 5px;
     align-items: center;
     margin-top: 18px;
+    
 }
+
+
 .count-energy {
     position: absolute;
     right: 5px;
@@ -320,12 +357,14 @@ img {
     width: 50px;
     background: linear-gradient(90deg, #2265CE 0%, #246FE3 94%);
 }
+
 .user-info-items {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
+
 .user-info-item {
     padding: 38px 15px;
     display: flex;
@@ -337,9 +376,18 @@ img {
     border-radius: 30px;
 
 }
+.user-info-item-title {
+    font-weight: 700;
+    font-size: 14px;
+}
+
 .user-info-item-count {
     margin-right: 30px;
+    font-weight: 700;
+    color: #F3BA2F;
+    font-size: 20px;
 }
+
 .claim-container {
     margin-top: 130px;
     width: 100%;
@@ -348,6 +396,7 @@ img {
     gap: 17px;
     align-items: center;
 }
+
 .claim-line {
     max-width: 257px;
     width: 100%;
@@ -356,6 +405,7 @@ img {
     background: #1A1661;
 
 }
+
 .btn-claim {
     border-radius: 3px;
     background-color: #000000;
@@ -365,8 +415,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
+
 .btn-claim-background {
     padding: 1px;
     display: flex;
@@ -375,5 +425,27 @@ img {
 
     background: linear-gradient(94.77deg, #FFFFFF 20.03%, rgba(153, 153, 153, 0.2) 100%);
     border-radius: 3px;
+    cursor: pointer;
+}
 
+.game {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 88px - 90px);
+}
+.game > *{
+    position: absolute;
+}
+.proton {
+    left: calc(50% - (246px / 2));
+    top: calc(50% - (233px / 2));
+    width: 246px;
+    height: 233px;
+    background: url('../images/game-icon/proton-lvl-1.png') 50% / cover;
+}
+.proton-tap-circle {
+    background: url('../images/game-icon/proton-1.png') 50% / cover;
+}
+.proton-tap-triangles {
+    background: url('../images/game-icon/proton-2.png') 50% / cover;
 }
