@@ -6,7 +6,7 @@
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0">
     <title>Proton</title>
-    <link href="./css/style.css?v=3481545746741123" type="text/css" rel="stylesheet">
+    <link href="./css/style.css?v=348112435531123" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -28,7 +28,9 @@
         </div>
     </div>
     <div class="game">
-        <div class="proton"></div>
+        <div id="proton" class="proton">
+            <img src="./images/game-icon/proton-lvl-1.png" alt="">
+        </div>
         <div class="proton-tap proton-tap-circle" style="width: 83px; height: 83px; right: 0; top: 80%; transform: rotate(49deg);"></div>
         <div class="proton-tap proton-tap-triangles" style="width: 61px; height: 61px; top: 5%; left: 50%; transform: rotate(49deg);"></div>
         <div class="proton-tap proton-tap-circle" style="width: 61px; height: 61px; left: 5%; top: 20%;"></div>
@@ -42,13 +44,14 @@
     </div>
     
     <div class="screen-footer">
-        <div class="footer-btn btn-home" onclick="window.location.href = './home.html'">
+        <div class="footer-btn btn-play" onclick="window.location.href = './home.html'"> 
         </div>
-        <div class="footer-btn btn-play btn-active"> 
+        <div class="footer-btn btn-home" onclick="window.location.href = './tasks.html'">
         </div>
-        <div class="footer-btn btn-evol" onclick="window.location.href = './tasks.html'"> 
+        
+        <div class="footer-btn btn-evol" onclick="window.location.href = './shop.html'"> 
         </div>
-        <div class="footer-btn btn-social">
+        <div class="footer-btn btn-social" onclick="window.location.href = './friends.html'">
         </div>
     </div>
 </div>

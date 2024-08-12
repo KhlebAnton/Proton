@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0">
+    <title>Proton</title>
+    <link href="./css/style.css?v=378912412496455" type="text/css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+    <div class="screen screen-home screen-lines-bg">
+        <div class="screen-title">Invite frens</div>
+        <div class="screen-desc">За каждого приглашенного друга вы получите 200 монет.</div>
+
+        <div class="friend-user-info">
+            <div class="friend-user-info-desc">
+                <div class="friend-user-info-desc-title">FRENS</div>
+                <div class="friend-user-info-desc-container">
+                    <div class="info-friends">0</div>
+                    <div class="info-coin">0</div>
+                </div>
+            </div>
+            <div class="friend-user-info-logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+        </div>
+        <div class="invite-friend-container">
+            <div class="btn-action btn-action-link">invite frens</div>
+            <div class="invite-friend-wrapper" onclick="copyLink()">
+                <div class="invite-friend-link">
+                    <span id="link">https://t.me/Proton_ecosystem_bot?start=undefined</span>
+                </div>
+                <div class="invite-friend-link-icon">
+                    <svg class="link-no-copy" aria-hidden="true" fill="none" focusable="false" height="1.5em"
+                        role="presentation" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5" viewBox="0 0 24 24" width="1.5em"
+                        class="absolute text-inherit opacity-100 scale-100 group-data-[copied=true]:opacity-0 group-data-[copied=true]:scale-50 transition">
+                        <path
+                            d="M16 17.1c0 3.5-1.4 4.9-4.9 4.9H6.9C3.4 22 2 20.6 2 17.1v-4.2C2 9.4 3.4 8 6.9 8h4.2c3.5 0 4.9 1.4 4.9 4.9Z">
+                        </path>
+                        <path d="M8 8V6.9C8 3.4 9.4 2 12.9 2h4.2C20.6 2 22 3.4 22 6.9v4.2c0 3.5-1.4 4.9-4.9 4.9H16">
+                        </path>
+                        <path d="M16 12.9C16 9.4 14.6 8 11.1 8"></path>
+                    </svg>
+                    <svg class="link-copy" aria-hidden="true" fill="none" focusable="false" height="1.5em" role="presentation"
+                        stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        viewBox="0 0 24 24" width="1.5em"
+                        class="absolute text-inherit opacity-0 scale-50 group-data-[copied=true]:opacity-100 group-data-[copied=true]:scale-100 transition">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="link-info-container">
+            <p>
+                <strong>Все ваши друзья останутся с вами навсегда</strong>
+                и будут приносить вам дополнительный доход на протяжении всей игры.
+            </p>
+
+        </div>
+
+        <div class="screen-footer">
+
+            <div class="footer-btn btn-play " onclick="window.location.href = './home.html'">
+            </div>
+            <div class="footer-btn btn-home" onclick="window.location.href = './tasks.html'">
+            </div>
+            <div class="footer-btn btn-evol" onclick="window.location.href = './shop.html'">
+            </div>
+            <div class="footer-btn btn-social btn-active" onclick="window.location.href = './friends.html'">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const link = document.getElementById('link');
+        const iconLinkCopy = document.querySelector('.invite-friend-link-icon');
+        function copyLink() {
+            navigator.clipboard.writeText(link.textContent)
+                .then(() => {
+                    iconLinkCopy.classList.add('copy-ok');
+
+                })
+                .catch(error => {
+                    console.error(`Текст не скопирован ${error}`)
+                })
+        }
+    </script>
+</body>
+
+</html>
