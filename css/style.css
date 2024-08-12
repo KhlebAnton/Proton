@@ -961,6 +961,10 @@ img {
 }
 .friend-user-info-logo {
     height: 100px;
+    width: 100px;
+}
+.friend-user-info-logo img {
+    object-fit: contain;
 }
 .friend-user-info-desc {
     display: flex;
